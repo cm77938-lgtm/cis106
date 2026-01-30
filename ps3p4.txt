@@ -1,0 +1,16 @@
+# Max Thompson 1/30/26
+# 1. Input
+make_model = input("Enter make and model: ")
+msrp = float(input("Enter MSRP: "))
+discount_percent = float(input("Enter discount percent (as a decimal): "))
+
+# 2. Process
+amount_off = msrp * discount_percent
+discounted_price = msrp - amount_off
+
+# 3. Output
+print(make_model)
+print(msrp)
+print(discount_percent)
+print(amount_off)
+print(discounted_price)

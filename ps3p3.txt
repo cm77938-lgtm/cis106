@@ -1,0 +1,9 @@
+# Max Thompson 1/30/26
+# 1. Input
+total_amount = float(input("Enter total amount received: "))
+
+# 2. Process
+split_amount = total_amount / 3
+
+# 3. Output
+print(split_amount)

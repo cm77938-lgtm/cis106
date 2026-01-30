@@ -1,0 +1,12 @@
+# Max Thompson - 1/30/29
+# 1. Input
+ticker = input("Enter ticker: ")
+shares = float(input("Enter shares: "))
+price = float(input("Enter price: "))
+
+# 2. Process
+total = shares * price
+
+# 3. Output
+print(ticker)
+print(total)

@@ -1,0 +1,12 @@
+# Max Thompson 1/30/26
+# 1. Input
+last_name = input("Enter last name: ")
+midterm = float(input("Enter midterm score: "))
+final = float(input("Enter final exam score: "))
+
+# 2. Process
+total_points = midterm + final
+
+# 3. Output
+print(last_name)
+print(total_points)
