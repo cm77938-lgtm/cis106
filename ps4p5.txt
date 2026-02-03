@@ -1,0 +1,22 @@
+# Get input
+name = input("Last name: ")
+deps = int(input("Number of dependents: "))
+gross = float(input("Gross income: "))
+
+# Step 1: Adjusted Gross
+adj_gross = gross - (deps * 12000)
+
+# Step 2: Find tax rate
+if adj_gross > 50000:
+    tax = adj_gross * 0.20
+else:
+    tax = adj_gross * 0.10
+
+# Step 3: Check for negative tax
+if tax < 0:
+    tax = 100
+
+# Show results
+print("Name:", name)
+print("Adjusted Gross:", adj_gross)
+print("Income Tax:", tax)

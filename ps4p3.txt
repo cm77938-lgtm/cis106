@@ -1,0 +1,16 @@
+# Get input
+books = int(input("How many books: "))
+cost = float(input("Cost per book: "))
+
+# Total before shipping
+total = books * cost
+
+# Logic for shipping
+if total > 50.00:
+    shipping = 0
+else:
+    shipping = 25.00
+
+# Show results
+print("Order Total:", total)
+print("Shipping:", shipping)

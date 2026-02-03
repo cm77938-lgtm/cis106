@@ -1,0 +1,17 @@
+# Get input
+item = input("Enter item A or B: ")
+qty = int(input("Enter quantity: "))
+
+# Logic for price
+if item == "A":
+    price = 10.00
+else:
+    price = 20.00
+
+# Math
+total = qty * price
+
+# Show results
+print("Item:", item)
+print("Unit Price:", price)
+print("Total:", total)

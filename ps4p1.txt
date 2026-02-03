@@ -1,0 +1,20 @@
+# Get input
+qty = float(input("Enter quantity: "))
+
+# Logic for price
+if qty >= 1000:
+    price = 3.00
+else:
+    price = 5.00
+
+# Math
+ext_price = qty * price
+tax = ext_price * 0.07
+total = ext_price + tax
+
+# Show results
+print("Quantity:", qty)
+print("Unit Price:", price)
+print("Extended Price:", ext_price)
+print("Tax:", tax)
+print("Total:", total)

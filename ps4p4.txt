@@ -1,0 +1,18 @@
+# Get input
+name = input("Appliance name: ")
+cost = float(input("Appliance cost: "))
+
+# Logic for warranty rate
+if cost > 1000:
+    warranty = cost * 0.10
+else:
+    warranty = cost * 0.05
+
+# Final math
+total = cost + warranty
+
+# Show results
+print("Appliance:", name)
+print("Cost:", cost)
+print("Warranty:", warranty)
+print("Total:", total)
