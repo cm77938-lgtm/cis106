@@ -1,0 +1,19 @@
+# Inputs
+employee_last_name = input("Enter last name: ")
+annual_salary_amt = float(input("Enter salary: "))
+employee_job_level = int(input("Enter job level: "))
+
+# Logic for bonus rate
+if employee_job_level >= 10:
+    bonus_percentage = 0.25
+elif 5 <= employee_job_level <= 9:
+    bonus_percentage = 0.20
+else:
+    bonus_percentage = 0.10
+
+# Calculation
+calculated_bonus = annual_salary_amt * bonus_percentage
+
+# Output
+print(f"Employee: {employee_last_name}")
+print(f"Bonus Amount: ${calculated_bonus:,.2f}")

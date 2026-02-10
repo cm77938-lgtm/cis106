@@ -1,0 +1,20 @@
+# Inputs
+principle_amount = float(input("Enter principle: "))
+years_to_mature = int(input("Enter years: "))
+
+# Logic for interest rate
+if principle_amount > 100000 and years_to_mature == 5:
+    interest_rate_pct = 0.06
+elif 50000 <= principle_amount <= 100000 and years_to_mature == 10:
+    interest_rate_pct = 0.05
+elif 50000 <= principle_amount <= 100000 and years_to_mature == 5:
+    interest_rate_pct = 0.04
+else:
+    interest_rate_pct = 0.02
+
+# Calculation
+yearly_interest = principle_amount * interest_rate_pct
+
+# Output
+print(f"Rate: {interest_rate_pct * 100}%")
+print(f"First Year Interest: ${yearly_interest:,.2f}")

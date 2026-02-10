@@ -1,0 +1,20 @@
+# Input
+ticket_quantity = int(input("Enter number of tickets: "))
+
+# Logic for ticket pricing levels
+if ticket_quantity >= 25:
+    price_per_ticket = 50
+elif ticket_quantity >= 10:
+    price_per_ticket = 60
+elif ticket_quantity >= 5:
+    price_per_ticket = 70
+else:
+    price_per_ticket = 75
+
+# Calculation
+total_ticket_cost = ticket_quantity * price_per_ticket
+
+# Output
+print(f"Tickets: {ticket_quantity}")
+print(f"Price Each: ${price_per_ticket}")
+print(f"Total Bill: ${total_ticket_cost}")

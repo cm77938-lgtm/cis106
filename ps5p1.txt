@@ -1,0 +1,20 @@
+# Inputs
+widget_quantity = int(input("Enter the quantity of widgets: "))
+
+# Logic to determine price per unit
+if widget_quantity > 10000:
+    unit_price = 10
+elif widget_quantity >= 5000:
+    unit_price = 20
+else:
+    unit_price = 30
+
+# Calculations
+extended_price = widget_quantity * unit_price
+tax_calculation = extended_price * 0.07
+final_total_cost = extended_price + tax_calculation
+
+# Output
+print(f"Extended Price: ${extended_price:,.2f}")
+print(f"Tax Amount: ${tax_calculation:,.2f}")
+print(f"Total Amount: ${final_total_cost:,.2f}")
