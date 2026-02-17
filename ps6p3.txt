@@ -1,0 +1,15 @@
+run_program_check = input("Do you want to start? (Yes/No): ")
+student_counter = 0
+
+while run_program_check == "Yes":
+    last_name_string = input("Enter last name: ")
+    exam_score_one = float(input("Enter first score: "))
+    exam_score_two = float(input("Enter second score: "))
+    
+    average_score = (exam_score_one + exam_score_two) / 2
+    print(last_name_string + " average is: " + str(average_score))
+    
+    student_counter = student_counter + 1
+    run_program_check = input("Do you want to enter another? (Yes/No): ")
+
+print("Total students entered: " + str(student_counter))

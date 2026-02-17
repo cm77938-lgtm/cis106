@@ -1,0 +1,24 @@
+run_discount_check = input("Start discount program? (Yes/No): ")
+sum_all_discounts = 0
+
+while run_discount_check == "Yes":
+    item_quantity_val = float(input("Enter quantity: "))
+    item_unit_price = float(input("Enter price: "))
+    
+    extended_price = item_quantity_val * item_unit_price
+    
+    if extended_price > 10000.00:
+        discount_amount = extended_price * 0.25
+    else:
+        discount_amount = extended_price * 0.10
+        
+    final_total_price = extended_price - discount_amount
+    
+    print("Extended Price: " + str(extended_price))
+    print("Discount Amount: " + str(discount_amount))
+    print("Total Price: " + str(final_total_price))
+    
+    sum_all_discounts = sum_all_discounts + discount_amount
+    run_discount_check = input("Enter another order? (Yes/No): ")
+
+print("Sum of all discounts: " + str(sum_all_discounts))

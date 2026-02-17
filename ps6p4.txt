@@ -1,0 +1,25 @@
+run_payroll_check = input("Start payroll program? (Yes/No): ")
+total_gross_pay = 0
+employee_count = 0
+
+while run_payroll_check == "Yes":
+    employee_name = input("Enter last name: ")
+    hours_worked_val = float(input("Enter hours: "))
+    hourly_pay_rate = float(input("Enter rate: "))
+    
+    if hours_worked_val > 40:
+        overtime_hours = hours_worked_val - 40
+        gross_pay_amount = (40 * hourly_pay_rate) + (overtime_hours * hourly_pay_rate * 1.5)
+    else:
+        gross_pay_amount = hours_worked_val * hourly_pay_rate
+        
+    print(employee_name + " Gross Pay: " + str(gross_pay_amount))
+    
+    total_gross_pay = total_gross_pay + gross_pay_amount
+    employee_count = employee_count + 1
+    run_payroll_check = input("Enter another employee? (Yes/No): ")
+
+average_pay_amt = total_gross_pay / employee_count
+print("Total Gross: " + str(total_gross_pay))
+print("Employee Count: " + str(employee_count))
+print("Average Pay: " + str(average_pay_amt))

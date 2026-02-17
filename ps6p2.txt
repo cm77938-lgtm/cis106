@@ -1,0 +1,10 @@
+start_number = int(input("Enter start value: "))
+stop_number = int(input("Enter stop value: "))
+increment_value = int(input("Enter increment: "))
+
+current_value = start_number
+
+while current_value <= stop_number:
+    print(current_value)
+    current_value = current_value + increment_value
+

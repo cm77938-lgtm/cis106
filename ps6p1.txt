@@ -1,0 +1,5 @@
+counter_variable = 1
+
+while counter_variable <= 25:
+    print(counter_variable)
+    counter_variable = counter_variable + 2
