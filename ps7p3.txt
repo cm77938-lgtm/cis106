@@ -1,0 +1,20 @@
+file_6 = open("employees.txt", "r")
+tbon_6 = 0.0
+name_6 = file_6.readline().strip()
+
+while name_6 != "":
+    sal_66 = float(file_6.readline().strip())
+    if sal_66 >= 100000:
+        rate_6 = 0.20
+    elif sal_66 >= 50000:
+        rate_6 = 0.15
+    else:
+        rate_6 = 0.10
+        
+    cbon_6 = sal_66 * rate_6
+    tbon_6 = tbon_6 + cbon_6
+    print(name_6, "Bonus: $", cbon_6)
+    name_6 = file_6.readline().strip()
+
+file_6.close()
+print("Total Bonus: $", tbon_6)

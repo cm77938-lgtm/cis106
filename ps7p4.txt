@@ -1,0 +1,18 @@
+file_6 = open("orders.txt", "r")
+tsum_6 = 0.0
+cnt_66 = 0
+item_6 = file_6.readline().strip()
+
+while item_6 != "":
+    qty_66 = int(file_6.readline().strip())
+    uprc_6 = float(file_6.readline().strip())
+    extp_6 = qty_66 * uprc_6
+    tsum_6 = tsum_6 + extp_6
+    cnt_66 = cnt_66 + 1
+    print(item_6, "Total: $", extp_6)
+    item_6 = file_6.readline().strip()
+
+file_6.close()
+avg_66 = tsum_6 / cnt_66
+print("Avg Order: $", avg_66)
+

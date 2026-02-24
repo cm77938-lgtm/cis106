@@ -1,0 +1,10 @@
+first6 = 1
+secon6 = 1
+print(first6)
+print(secon6)
+
+for loop66 in range(18):
+    next_6 = first6 + secon6
+    print(next_6)
+    first6 = secon6
+    secon6 = next_6

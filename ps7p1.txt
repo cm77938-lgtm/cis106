@@ -1,0 +1,16 @@
+go_on6 = "y"
+while go_on6 == "y":
+    p_amt6 = float(input("Enter principal: "))
+    rate_6 = float(input("Enter interest rate: "))
+    tint_6 = 0.0
+    
+    for year66 in range(1, 6):
+        bbal_6 = p_amt6
+        aint_6 = bbal_6 * rate_6
+        ebal_6 = bbal_6 + aint_6
+        tint_6 = tint_6 + aint_6
+        print("Year", year66, ": $", ebal_6)
+        p_amt6 = ebal_6
+        
+    print("Total Interest: $", tint_6)
+    go_on6 = input("Run again? (y/n): ")

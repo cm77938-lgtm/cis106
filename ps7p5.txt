@@ -1,0 +1,22 @@
+file_6 = open("students.txt", "r")
+tall_6 = 0.0
+scnt_6 = 0
+snam_6 = file_6.readline().strip()
+
+while snam_6 != "":
+    dist_6 = file_6.readline().strip()
+    cred_6 = int(file_6.readline().strip())
+    if dist_6 == "I":
+        cost_6 = 250.00
+    else:
+        cost_6 = 500.00
+        
+    tuit_6 = cred_6 * cost_6
+    tall_6 = tall_6 + tuit_6
+    scnt_6 = scnt_6 + 1
+    print(snam_6, "Owes: $", tuit_6)
+    snam_6 = file_6.readline().strip()
+
+file_6.close()
+print("Total Tuition: $", tall_6)
+print("Total Students:", scnt_6)
