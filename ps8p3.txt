@@ -1,0 +1,22 @@
+# Max Thompson - 3/3/2026
+
+# PROCESS
+def calculate_trip_mpg(miles_travelled, gallons_consumed):
+    return miles_travelled / gallons_consumed
+
+# INPUT & OUTPUT
+continue_program = input("Start? (Yes/No): ")
+total_trip_count = 0
+
+while continue_program.lower() == "yes":
+    destination_city = input("Enter city: ")
+    miles_travelled = float(input("Enter miles: "))
+    gallons_consumed = float(input("Enter gallons: "))
+    
+    miles_per_gallon = calculate_trip_mpg(miles_travelled, gallons_consumed)
+    total_trip_count = total_trip_count + 1
+    
+    print(f"City: {destination_city}, MPG: {miles_per_gallon:.2f}")
+    continue_program = input("Continue? (Yes/No): ")
+
+print(f"Total trips: {total_trip_count}")

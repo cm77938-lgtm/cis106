@@ -1,0 +1,26 @@
+# Max THompson - 3/3/2026
+
+# PROCESS
+def get_tuition_amount(credit_hours_qty, district_code_in):
+    if district_code_in.upper() == "I":
+        tuition_rate_per = 250
+    else:
+        tuition_rate_per = 550
+    return credit_hours_qty * tuition_rate_per
+
+# INPUT & OUTPUT
+continue_program = input("Start? (Yes/No): ")
+total_tuition_sum = 0
+
+while continue_program.lower() == "yes":
+    student_last_name = input("Enter last name: ")
+    credit_hours_qty = int(input("Enter credits: "))
+    district_code_in = input("District (I/O): ")
+    
+    tuition_owed_amt = get_tuition_amount(credit_hours_qty, district_code_in)
+    total_tuition_sum = total_tuition_sum + tuition_owed_amt
+    
+    print(f"Student: {student_last_name}, Owed: {tuition_owed_amt}")
+    continue_program = input("Continue? (Yes/No): ")
+
+print(f"Total Tuition Collected: {total_tuition_sum}")

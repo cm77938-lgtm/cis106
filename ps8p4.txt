@@ -1,0 +1,30 @@
+# Max Thompson - 3/3/2026
+
+# PROCESS
+def get_hourly_rate(job_code_input):
+    if job_code_input.upper() == "L": return 25
+    if job_code_input.upper() == "A": return 30
+    if job_code_input.upper() == "J": return 50
+    return 0
+
+# INPUT & OUTPUT
+continue_program = input("Start? (Yes/No): ")
+total_payroll_sum = 0
+
+while continue_program.lower() == "yes":
+    employee_last_name = input("Enter last name: ")
+    job_code_input = input("Enter code (L, A, J): ")
+    hours_worked_qty = float(input("Enter hours: "))
+    
+    hourly_pay_rate = get_hourly_rate(job_code_input)
+    
+    if hours_worked_qty > 40:
+        gross_pay_amount = (40 * hourly_pay_rate) + ((hours_worked_qty - 40) * hourly_pay_rate * 1.5)
+    else:
+        gross_pay_amount = hours_worked_qty * hourly_pay_rate
+        
+    total_payroll_sum = total_payroll_sum + gross_pay_amount
+    print(f"Employee: {employee_last_name}, Gross: {gross_pay_amount}")
+    continue_program = input("Continue? (Yes/No): ")
+
+print(f"Total Payroll: {total_payroll_sum}")

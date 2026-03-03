@@ -1,0 +1,24 @@
+# Max Thompson - 3/3/2026
+
+# PROCESS
+def calculate_average(hits_count, at_bats_count):
+    if at_bats_count == 0:
+        return 0
+    return hits_count / at_bats_count
+
+# INPUT & OUTPUT
+continue_program = input("Start? (Yes/No): ")
+player_counter = 0
+
+while continue_program.lower() == "yes":
+    player_last_name = input("Enter last name: ")
+    hits_count = int(input("Enter hits: "))
+    at_bats_count = int(input("Enter at bats: "))
+    
+    batting_average = calculate_average(hits_count, at_bats_count)
+    player_counter = player_counter + 1
+    
+    print(f"Name: {player_last_name}, Average: {batting_average:.3f}")
+    continue_program = input("Continue? (Yes/No): ")
+
+print(f"Total players processed: {player_counter}")

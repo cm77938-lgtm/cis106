@@ -1,0 +1,24 @@
+# Max Thompson - 3/3/2026
+
+# PROCESS
+def calculate_total(quantity_input, price_per_unit):
+    subtotal_amount = quantity_input * price_per_unit
+    if subtotal_amount > 10000:
+        subtotal_amount = subtotal_amount * 0.90
+    return subtotal_amount
+
+# INPUT & OUTPUT
+continue_program = input("Start? (Yes/No): ")
+grand_total_sum = 0
+
+while continue_program.lower() == "yes":
+    quantity_input = float(input("Enter quantity: "))
+    price_per_unit = float(input("Enter price: "))
+    
+    extended_price = calculate_total(quantity_input, price_per_unit)
+    grand_total_sum = grand_total_sum + extended_price
+    
+    print(f"Qty: {quantity_input}, Price: {price_per_unit}, Total: {extended_price}")
+    continue_program = input("Continue? (Yes/No): ")
+
+print(f"Final Grand Total: {grand_total_sum}")
