@@ -1,0 +1,19 @@
+# Max Thompson 3/12/2026
+
+def get_room_footage(lengthval, widthval, heightval):
+    floor_ceiling = 2 * lengthval * widthval
+    side_walls = 2 * lengthval * heightval
+    end_walls = 2 * widthval * heightval
+    return floor_ceiling + side_walls + end_walls
+
+user_choice = "Yes"
+while user_choice == "Yes":
+    lengthval = float(input("Enter length: "))
+    widthval = float(input("Enter width: "))
+    heightval = float(input("Enter height: "))
+    
+    total_footage = get_room_footage(lengthval, widthval, heightval)
+    gallons_needed = total_footage / 50
+    print("Gallons of paint needed:", gallons_needed)
+    
+    user_choice = input("Do you want to continue (Yes/No)? ")

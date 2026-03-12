@@ -1,0 +1,25 @@
+# Max Thompson 3/12/2026
+
+def compute_ticket_price(miles_distance):
+    if miles_distance >= 30:
+        return 12
+    elif miles_distance >= 20:
+        return 10
+    elif miles_distance >= 10:
+        return 8
+    else:
+        return 5
+
+running_total = 0
+user_choice = "Yes"
+while user_choice == "Yes":
+    lastname = input("Enter last name: ")
+    miles_input = float(input("Enter miles from downtown: "))
+    
+    ticket_cost = compute_ticket_price(miles_input)
+    running_total += ticket_cost
+    
+    print("Ticket price:", ticket_cost)
+    user_choice = input("Continue (Yes/No)? ")
+
+print("Total sum of all tickets:", running_total)

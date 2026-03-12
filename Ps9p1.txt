@@ -1,0 +1,24 @@
+# Max Thompson - 3/12/2026
+
+def calculate_forecast(input_month, sales_amount):
+    if input_month in ["Jan", "Feb", "Mar"]:
+        forecast_percent = 0.10
+    elif input_month in ["Apr", "May", "Jun"]:
+        forecast_percent = 0.15
+    elif input_month in ["Jul", "Aug", "Sep"]:
+        forecast_percent = 0.20
+    else:
+        forecast_percent = 0.25
+    
+    return sales_amount * (1 + forecast_percent)
+
+user_choice = "Yes"
+while user_choice == "Yes":
+    lastname = input("Enter last name: ")
+    monthval = input("Enter month: ")
+    salesval = float(input("Enter sales: "))
+    
+    result = calculate_forecast(monthval, salesval)
+    print("Next month forecast:", result)
+    
+    user_choice = input("Do you want to continue (Yes/No)? ")
