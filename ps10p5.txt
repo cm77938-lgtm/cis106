@@ -1,0 +1,21 @@
+# Max Thompson - 3/18/2026
+
+global_tot = 0.0
+global_tax = 0.0
+
+def calc_5(item_q_qty, item_p_prc):
+    global global_tot
+    global global_tax
+    global_tot = item_q_qty * item_p_prc
+    global_tax = global_tot * 0.07
+
+def main():
+    item_q_qty = float(input("Enter quantity: "))
+    item_p_prc = float(input("Enter price: "))
+    
+    calc_5(item_q_qty, item_p_prc)
+    
+    print(global_tot)
+    print(global_tax)
+
+main()

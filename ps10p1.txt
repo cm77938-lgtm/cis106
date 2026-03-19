@@ -1,0 +1,20 @@
+# Max Thompson - 3/18/2026
+
+def calc_1(number_qty, amount_prc, rate__pct):
+    amount_off = amount_prc * rate__pct
+    final__prc = amount_prc - amount_off
+    return amount_off, final__prc
+
+def main():
+    number_qty = float(input("Enter quantity: "))
+    amount_prc = float(input("Enter price: "))
+    rate__pct = float(input("Enter discount rate: "))
+    
+    amount_off, final__prc = calc_1(number_qty, amount_prc, rate__pct)
+    
+    print(number_qty)
+    print(amount_prc)
+    print(amount_off)
+    print(final__prc)
+
+main()

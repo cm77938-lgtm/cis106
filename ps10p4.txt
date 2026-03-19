@@ -1,0 +1,22 @@
+# Max Thompson - 3/18/2026
+
+def calc_4(scor_1_pt, scor_2_pt, scor_3_pt, player_hcp):
+    normal_avg = (scor_1_pt + scor_2_pt + scor_3_pt) / 3
+    handi__avg = normal_avg + player_hcp
+    return normal_avg, handi__avg
+
+def main():
+    player_nam = input("Enter last name: ")
+    scor_1_pt = float(input("Enter score 1: "))
+    scor_2_pt = float(input("Enter score 2: "))
+    scor_3_pt = float(input("Enter score 3: "))
+    player_hcp = float(input("Enter handicap: "))
+    
+    normal_avg, handi__avg = calc_4(scor_1_pt, scor_2_pt, scor_3_pt, player_hcp)
+    
+    print(player_nam)
+    print(normal_avg)
+    print(handi__avg)
+
+main()
+

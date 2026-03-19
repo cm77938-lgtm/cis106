@@ -1,0 +1,23 @@
+# Max Thompson - 3/18/2026
+
+
+def calc_3(sales_amt):
+    if sales_amt > 100000:
+        commis_amt = sales_amt * 0.10
+    else:
+        commis_amt = sales_amt * 0.05
+    
+    target_val = sales_amt * 0.05
+    return commis_amt, target_val
+
+def main():
+    seller_nam = input("Enter last name: ")
+    sales_amt = float(input("Enter sales: "))
+    
+    commis_amt, target_val = calc_3(sales_amt)
+    
+    print(seller_nam)
+    print(commis_amt)
+    print(target_val)
+
+main()

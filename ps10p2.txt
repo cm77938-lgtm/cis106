@@ -1,0 +1,20 @@
+# Max Thompson - 3/18/2026
+
+def calc_2(test_1_sc, test_2_sc, test_3_sc):
+    total__pts = test_1_sc + test_2_sc + test_3_sc
+    average_sc = total__pts / 3
+    return total__pts, average_sc
+
+def main():
+    last__nam = input("Enter last name: ")
+    test_1_sc = float(input("Enter score 1: "))
+    test_2_sc = float(input("Enter score 2: "))
+    test_3_sc = float(input("Enter score 3: "))
+    
+    total__pts, average_sc = calc_2(test_1_sc, test_2_sc, test_3_sc)
+    
+    print(last__nam)
+    print(total__pts)
+    print(average_sc)
+
+main()
