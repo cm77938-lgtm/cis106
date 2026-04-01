@@ -1,0 +1,18 @@
+# Max Thompson - 4/1/2026
+
+def get_comma_separated_values():
+    raw_csv_input_string = input("Enter comma-separated values: ")
+    return raw_csv_input_string
+
+def parse_and_print_each_item(full_csv_text_string):
+    # Splitting the string into a list based on commas
+    list_of_csv_items = full_csv_text_string.split(",")
+    
+    for individual_item_string in list_of_csv_items:
+        # Removing the extra spaces from each item
+        cleaned_item_string = individual_item_string.strip()
+        print(cleaned_item_string)
+
+# Executing the program
+input_csv_string = get_comma_separated_values()
+parse_and_print_each_item(input_csv_string)

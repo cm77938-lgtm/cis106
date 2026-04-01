@@ -1,0 +1,26 @@
+# Max Thompson - 4/1/2026
+
+def get_user_text_input():
+    return input("Enter a line of text: ")
+
+def remove_all_extra_spaces(messy_input_string):
+    # This splits by any whitespace and joins with a single space
+    word_list_variable = messy_input_string.split()
+    cleaned_text_string = " ".join(word_list_variable)
+    return cleaned_text_string
+
+def reverse_the_text_string(normal_text_string):
+    reversed_result_string = ""
+    # Loop backwards through the string
+    for character_index in range(len(normal_text_string) - 1, -1, -1):
+        reversed_result_string = reversed_result_string + normal_text_string[character_index]
+    return reversed_result_string
+
+def output_the_reversed_text(final_output_string):
+    print(final_output_string)
+
+# Main logic flow
+starting_text_string = get_user_text_input()
+cleaned_text_variable = remove_all_extra_spaces(starting_text_string)
+backwards_text_string = reverse_the_text_string(cleaned_text_variable)
+output_the_reversed_text(backwards_text_string)

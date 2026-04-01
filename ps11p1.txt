@@ -1,0 +1,32 @@
+# Max Thompson - 4/1/2026
+
+def input_the_full_name():
+    user_input_string = input("Enter First and Last Name: ")
+    return user_input_string
+
+def process_the_name_format(original_name_string):
+    # Removing extra spaces from the ends first
+    cleaned_name_string = original_name_string.strip()
+    
+    # Finding where the space is to split the names
+    space_location_index = cleaned_name_string.find(" ")
+    
+    if space_location_index == -1:
+        return "Error: You must enter at least two names."
+    
+    # Slicing the string into two parts
+    first_name_variable = cleaned_name_string[0:space_location_index]
+    last_name_variable = cleaned_name_string[space_location_index:].strip()
+    
+    # Getting the first letter and adding a period
+    first_initial_character = first_name_variable[0].upper()
+    
+    return last_name_variable + ", " + first_initial_character + "."
+
+def display_the_final_result(formatted_name_output):
+    print(formatted_name_output)
+
+# Running the subroutines
+input_data_string = input_the_full_name()
+result_name_string = process_the_name_format(input_data_string)
+display_the_final_result(result_name_string)

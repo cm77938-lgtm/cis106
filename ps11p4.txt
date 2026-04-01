@@ -1,0 +1,37 @@
+# Max Thompson - 4/1/2026
+
+def get_scroller_settings():
+    base_text_input_string = input("Enter the text: ")
+    line_width_variable = int(input("Characters per line: "))
+    total_lines_variable = int(input("Number of lines: "))
+    scroll_direction_string = input("Direction (left/right): ")
+    return base_text_input_string, line_width_variable, total_lines_variable, scroll_direction_string
+
+def build_full_length_string(short_text_string, target_width_integer):
+    long_repeated_string = ""
+    # Keep adding the string until it is long enough
+    while len(long_repeated_string) < target_width_integer:
+        long_repeated_string = long_repeated_string + short_text_string
+    # Cut it to the exact length needed
+    return long_repeated_string[:target_width_integer]
+
+def shift_string_by_one(current_line_string, direction_choice_string):
+    if direction_choice_string == "left":
+        # Take everything from the second character to the end, then add the first character
+        return current_line_string[1:] + current_line_string[0]
+    else:
+        # Take the last character and put it at the start
+        return current_line_string[-1] + current_line_string[:-1]
+
+def start_scrolling_process():
+    user_text, max_width, count_lines, user_direction = get_scroller_settings()
+    
+    display_line_string = build_full_length_string(user_text, max_width)
+    
+    current_line_count = 0
+    while current_line_count < count_lines:
+        print(display_line_string)
+        display_line_string = shift_string_by_one(display_line_string, user_direction)
+        current_line_count = current_line_count + 1
+
+start_scrolling_process()
