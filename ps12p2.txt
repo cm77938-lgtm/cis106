@@ -1,0 +1,21 @@
+# Max Thompson - 4/7/2026
+
+score_records = [85, 92, 78, 90, 88, 76, 95, 89, 82, 91]
+name_records = ["Smith", "Johnson", "Williams", "Brown", "Jones", "Garcia", "Miller", "Davis", "Rodriguez", "Martinez"]
+
+highest_score = 0
+highest_index = 0
+lowest_score = 999
+lowest_index = 0
+
+for search_index in range(len(score_records)):
+    if score_records[search_index] > highest_score:
+        highest_score = score_records[search_index]
+        highest_index = search_index
+        
+    if score_records[search_index] < lowest_score:
+        lowest_score = score_records[search_index]
+        lowest_index = search_index
+
+print("Highest Scorer:", name_records[highest_index], "with", highest_score)
+print("Lowest Scorer:", name_records[lowest_index], "with", lowest_score)

@@ -1,0 +1,14 @@
+# Max Thompson - 4/7/2026
+
+# Initialization of parallel arrays
+student_names = ["Smith", "Johnson", "Williams", "Brown", "Jones", "Garcia", "Miller", "Davis", "Rodriguez", "Martinez"]
+student_scores = [85, 92, 78, 90, 88, 76, 95, 89, 82, 91]
+
+print("--- Forward Order ---")
+for current_index in range(len(student_names)):
+    print(student_names[current_index], "-", student_scores[current_index])
+
+print("\n--- Reverse Order ---")
+# Start at the last index, end at 0, move by -1
+for reverse_index in range(len(student_names) - 1, -1, -1):
+    print(student_names[reverse_index], "-", student_scores[reverse_index])

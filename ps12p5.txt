@@ -1,0 +1,29 @@
+# Max Thompson - 4/7/2026
+
+# Part 1: Loading data into parallel arrays
+lines = ["Smith,85", "Jones,92", "Brown,77", "Davis,88", "White,91"]
+
+names = []
+grade = []
+
+for entry in lines:
+    parts = entry.split(",")
+    first = parts[0]
+    score = int(parts[1])
+    
+    names.append(first)
+    grade.append(score)
+
+# Part 2: Searching with "Name not found" logic
+query = input("Enter name: ")
+check = False
+
+for index in range(len(names)):
+    if names[index].lower() == query.lower():
+        print("Found:", names[index], "Score:", grade[index])
+        check = True
+        break
+
+if check == False:
+    print("Name not found.")
+

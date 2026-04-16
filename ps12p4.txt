@@ -1,0 +1,18 @@
+# Max Thompson - 4/7/2026
+
+# Example of what a file line looks like: "Smith,85"
+file_content = ["Smith,85", "Jones,92", "Brown,77"]
+
+loaded_names = []
+loaded_scores = []
+
+for line_data in file_content:
+    split_parts = line_data.split(",")
+    # Save the name and convert score to integer
+    current_name = split_parts[0]
+    current_score = int(split_parts[1])
+    
+    loaded_names.append(current_name)
+    loaded_scores.append(current_score)
+
+print("Successfully loaded", len(loaded_names), "records.")
