@@ -1,0 +1,81 @@
+# Max Thompson- 4/15/2026
+
+# --- Dynamic List Operations ---
+
+# Prompt for the number of items and create the list [cite: 4, 5, 6]
+total_count = int(input("How many items will be in the list? "))
+items_list = []
+
+for index in range(total_count):
+    entry_val = int(input("Enter an integer: "))
+    items_list.append(entry_val)
+
+# Display the initial list [cite: 7]
+print("Initial list:", items_list)
+
+# Insert 99 at position 1 and display 
+items_list.insert(1, 99)
+print("After inserting 99:", items_list)
+
+# Replace the value at position 1 with 100 and display [cite: 9]
+items_list[1] = 100
+print("After replacing with 100:", items_list)
+
+# Create and display a second list [cite: 10]
+extra_list = [500, 600, 700, 800, 900]
+print("Second list:", extra_list)
+
+# Extend the first list with the second and display 
+items_list.extend(extra_list)
+print("Extended list:", items_list)
+
+# Remove specific value 800 and display 
+items_list.remove(800)
+print("After removing 800:", items_list)
+
+# Remove the third item (index 2) and display 
+items_list.pop(2)
+print("After removing third item:", items_list)
+
+
+# --- Grade List Operations ---
+
+# Create list of grades [cite: 14]
+grade_list = ["A", "B", "C", "A", "A", "C"]
+
+# Display count of 'A' grades [cite: 15]
+print("Number of A grades:", grade_list.count("A"))
+
+# Display index of first 'B' grade [cite: 16]
+print("Position of first B:", grade_list.index("B"))
+
+# Check for 'F' without causing an error [cite: 17, 18]
+if "F" not in grade_list:
+    print("F is not in the list.")
+
+# Clear the second list and display [cite: 19]
+extra_list.clear()
+print("Cleared second list:", extra_list)
+
+# Delete the second list [cite: 20]
+del extra_list
+# Note: Attempting to print(extra_list) now would cause an error as required.
+
+
+# --- Player List Operations ---
+
+# Create list of players [cite: 21]
+names_list = ["Rizzo", "Davis", "Baez", "Happ", "Bryan"]
+
+# Sort and display [cite: 22]
+names_list.sort()
+print("Sorted players:", names_list)
+
+# Copy the list [cite: 23]
+copy_list = names_list.copy()
+print("Copy of players (players2):", copy_list)
+
+# Reverse the copy and display both [cite: 24]
+copy_list.reverse()
+print("Original names list:", names_list)
+print("Reversed copy list:", copy_list)
