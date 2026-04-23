@@ -1,0 +1,25 @@
+# Max Thompson - 4/23/2026
+
+class Student:
+    def __init__(self, first_name, lasts_name, house_dist, total_creds):
+        self.first_name = first_name
+        self.lasts_name = lasts_name
+        self.house_dist = house_dist  # 'I' for In-district
+        self.total_creds = total_creds
+
+    def compute_tuition(self):
+        # In-district pays $250, others pay $500
+        if self.house_dist == "I":
+            tuition_rate = 250
+        else:
+            tuition_rate = 500
+        
+        final_costs = self.total_creds * tuition_rate
+        return final_costs
+
+# Testing the Student class
+new_student = Student("John", "Doe", "I", 12)
+billed_amount = new_student.compute_tuition()
+
+print(f"Student: {new_student.first_name} {new_student.lasts_name}")
+print(f"Tuition Owed: ${billed_amount}")

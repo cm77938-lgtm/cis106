@@ -1,0 +1,19 @@
+# Max Thompson - 4/23/2026
+
+class Employee:
+    def __init__(self, worker_name, annual_salary):
+        self.worker_name = worker_name
+        self.annual_salary = annual_salary
+
+    def calculate_bonus(self, bonus_rate):
+        # Multiplies salary by the rate and returns the value
+        total_bonus = self.annual_salary * bonus_rate
+        return total_bonus
+
+# Testing the Employee class
+staff_member = Employee("Alice Smith", 50000)
+percent_rate = 0.05  # 5% bonus
+amount_earned = staff_member.calculate_bonus(percent_rate)
+
+print(f"Employee: {staff_member.worker_name}")
+print(f"Bonus Earned: ${amount_earned}")
