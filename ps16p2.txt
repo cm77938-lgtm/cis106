@@ -1,0 +1,50 @@
+# Max Thompson - 4/30/2026
+
+
+# Base car class
+class My_Car:
+    def __init__(self, mk_name, md_name, st_prce):
+        self.mk_name = mk_name
+        self.md_name = md_name
+        self.st_prce = st_prce
+        # Discount price is 90% of sticker
+        self.ds_prce = st_prce * 0.90
+        self.op_cost = 0.0
+
+# Sport car with specific performance options
+class Sports(My_Car):
+    def set_wh(self, status):
+        if status == "Y":
+            self.op_cost += 1000.00
+            
+    def set_en(self, status):
+        if status == "Y":
+            self.op_cost += 3000.00
+            
+    def set_in(self, status):
+        if status == "Y":
+            self.op_cost += 2000.00
+            
+    def get_tp(self):
+        return self.ds_prce + self.op_cost
+
+# Luxury car with premium technology options
+class Luxury(Sports):
+    def set_gp(self, status):
+        if status == "Y":
+            self.op_cost += 5000.00
+            
+    def set_sd(self, status):
+        if status == "Y":
+            self.op_cost += 10000.00
+
+# Testing the objects
+car_01 = Sports("Toyota", "Supra", 50000)
+car_01.set_wh("Y")
+car_01.set_en("Y")
+print("Sport Total Price:", car_01.get_tp())
+
+car_02 = Luxury("Lexus", "LS500", 90000)
+car_02.set_gp("Y")
+car_02.set_sd("Y")
+print("Luxury Total Price:", car_02.get_tp())

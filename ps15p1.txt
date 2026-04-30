@@ -1,0 +1,36 @@
+# Max Thompson - 4/30/2026
+
+# Simple class to store employee data
+class Person:
+    def __init__(self, em_name, em_dept, em_payr):
+        self.em_name = em_name
+        self.em_dept = em_dept
+        self.em_payr = em_payr
+        self.em_rate = 0.0
+
+    # Method to set the bonus rate
+    def set_bn(self, bn_rate):
+        self.em_rate = bn_rate
+
+    # Method to calculate and return bonus and total pay
+    def get_cp(self):
+        bn_ammt = self.em_payr * self.em_rate
+        tot_pay = self.em_payr + bn_ammt
+        return bn_ammt, tot_pay
+
+# Main execution
+# Instantiate the employee object
+worker = Person("John Doe", "Accounting", 50000)
+
+# Set a bonus rate (e.g., 10%)
+worker.set_bn(0.10)
+
+# Retrieve calculations
+bonus, total = worker.get_cp()
+
+# Display results
+print("Employee:", worker.em_name)
+print("Department:", worker.em_dept)
+print("Salary:", worker.em_payr)
+print("Bonus Amount:", bonus)
+print("Total Compensation:", total)

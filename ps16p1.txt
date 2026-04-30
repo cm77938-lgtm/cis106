@@ -1,0 +1,32 @@
+# Max Thompson - 4/30/2026
+
+# Base class for all employees
+class Person:
+    def __init__(self, em_name, em_dept, em_payr):
+        self.em_name = em_name
+        self.em_dept = em_dept
+        self.em_payr = em_payr
+
+# Manager class inherits from Person
+class Manage(Person):
+    def get_lb(self):
+        # Long term bonus is 40% of salary
+        return self.em_payr * 0.40
+
+# Executive class inherits from Manage
+class Execut(Manage):
+    def get_eb(self):
+        # Executive bonus is 200% of salary
+        return self.em_payr * 2.00
+    
+    def get_lb(self):
+        # Overridden long term bonus is 50% of salary
+        return self.em_payr * 0.50
+
+# Testing the objects
+mgr_01 = Manage("Alice Smith", "Sales", 80000)
+print("Manager Bonus:", mgr_01.get_lb())
+
+exe_01 = Execut("Bob Jones", "Admin", 150000)
+print("Exec Long Bonus:", exe_01.get_lb())
+print("Exec Spec Bonus:", exe_01.get_eb())
